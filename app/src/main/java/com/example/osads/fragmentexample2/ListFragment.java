@@ -39,13 +39,13 @@ public class ListFragment extends Fragment {
             mListener = (OnListFragmentInteractionListener) context;
         } catch (ClassCastException e) {
             throw new ClassCastException(context.toString()
-                    + " должен реализовывать интерфейс OnListFragmentInteractionListener");
+                    + " must implements OnListFragmentInteractionListener interface");
         }
     }
     public void updateDetail() {
-        // генерируем некоторые данные
+        // generating data
         String curDate = new Date().toString();
-        // Посылаем данные Activity
+        // transfer data to activity
         mListener.onListFragmentInteraction(curDate);
     }
 
