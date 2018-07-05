@@ -37,14 +37,14 @@ public class DetailFragment extends Fragment {
             mListener = (OnDetailFragmentInteractionListener) context;
         } catch (ClassCastException e){
             throw new ClassCastException(context.toString() +
-                    " должен реализовывать интерфейс OnDetailListFragmentInteractionListener");
+                    " must implement the  OnDetailListFragmentInteractionListener interface");
         }
     }
 
     public void updateList() {
-        // генерируем некоторые данные
+        // generating data
         String curDate = new Date().toString();
-        // Посылаем данные Activity
+        // Transfer data to activity
         mListener.onDetailFragmentInteraction(curDate);
     }
 
